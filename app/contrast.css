@@ -1,0 +1,30 @@
+/* Windows 98 controls must not inherit pale text from dark parent panels. */
+button:is(.retro,.stamp,.primary),
+.titlebar button,.window-head button,.retro-title button,
+.password button,.ending button,.ending-story button,
+.fragment-bank button,.breaker-panel button,.console button,
+.case-note button,.mystery-desktop>footer button,
+.photo-puzzle button,.chat-puzzle button,.dial-puzzle>button,
+.power-puzzle>button,.audio-puzzle>button,
+.memory-puzzle>button:last-of-type,.glyph-puzzle>button,
+.core-console>button,.final-choices button,.hard-ending button,
+.puzzle-body button,.act-choice button,.final-ending article button,
+.sector-puzzle button,.prologue button,.recap-screen button,
+.start,.tasks button,.start-menu button {
+  color:#111;
+  text-shadow:none;
+}
+
+.puzzle-body,.window-content,.window-body,.case-note,.case-panel,
+.evidence-archive>section,.file-puzzle article,.mail-body,
+.trash-file,.password,.secret-doc,.sector-puzzle,.recovered-note {
+  color:#111;
+}
+
+.act-choice button:hover,.start-menu button:hover {
+  color:#fff;
+}
+
+.primary {
+  color:#fff;
+}
