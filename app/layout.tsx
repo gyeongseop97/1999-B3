@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./intro-fix.css";
 import "./acts.css";
 import "./recap.css";
 import "./overrides.css";
 import "./act-title.css";
+import "./mobile.css";
 
 export const metadata: Metadata = {
   title: "지하 3층 — 1999 미스터리",
@@ -12,4 +13,5 @@ export const metadata: Metadata = {
   openGraph:{title:"지하 3층 — 1999 미스터리",description:"1999년, 버려진 PC가 켜졌다.",images:["/b3-intro.png"]},
   twitter:{card:"summary_large_image",title:"지하 3층 — 1999 미스터리",description:"1999년, 버려진 PC가 켜졌다.",images:["/b3-intro.png"]}
 };
+export const viewport: Viewport = {width:"device-width",initialScale:1,maximumScale:1,userScalable:false,viewportFit:"cover"};
 export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ko"><body>{children}</body></html>}
