@@ -7,6 +7,7 @@ import "./overrides.css";
 import "./act-title.css";
 import "./mobile.css";
 import "./detective.css";
+import "./ending-polish.css";
 
 export const metadata: Metadata = {
   title: "지하 3층 — 1999 미스터리",
