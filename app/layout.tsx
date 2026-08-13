@@ -4,6 +4,7 @@ import "./intro-fix.css";
 import "./acts.css";
 import "./recap.css";
 import "./overrides.css";
+import "./act-title.css";
 
 export const metadata: Metadata = {
   title: "지하 3층 — 1999 미스터리",
