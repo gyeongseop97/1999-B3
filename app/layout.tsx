@@ -10,6 +10,7 @@ import "./detective.css";
 import "./ending-polish.css";
 import "./narrative.css";
 import "./evidence-images.css";
+import "./archive-ending.css";
 
 export const metadata: Metadata = {
   title: "지하 3층 — 1999 미스터리",
