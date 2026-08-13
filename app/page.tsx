@@ -27,7 +27,7 @@ export default function Home() {
   const minimize=(id:AppId)=>{setMinimized(m=>m.includes(id)?m:[...m,id]);setActive(null)};
   const beginDrag=(e:React.MouseEvent,id:AppId)=>{if((e.target as HTMLElement).closest("button"))return;e.preventDefault();const r=(e.currentTarget.parentElement as HTMLElement).getBoundingClientRect();drag.current={id,dx:e.clientX-r.left,dy:e.clientY-r.top};setActive(id)};
   const progress=[open.includes("computer"),mail,restored,photoMeta,archive,folderOpen,consoleOpen,!!ended];
-  const submitConsole=(e:React.FormEvent)=>{e.preventDefault();const errs=[];if(subject.toUpperCase()!=="YSJ-043")errs.push("피험자 식별자");if(cutoff!=="2307")errs.push("차단 시각");if(checksum!=="50")errs.push("체크섬");if(errs.length)setConsoleError(`${errs.join(", ")} 값이 일치하지 않습니다.`);else{setConsoleError("");setConsoleOpen(true)}};
+  const submitConsole=(e:React.FormEvent)=>{e.preventDefault();const clean=(v:string)=>v.trim().replace(/[０-９]/g,c=>String(c.charCodeAt(0)-0xfee0));const errs=[];if(clean(subject).toUpperCase()!=="YSJ-043")errs.push("피험자 식별자");if(clean(cutoff)!=="2307")errs.push("차단 시각");if(clean(checksum)!=="19")errs.push("체크섬");if(errs.length)setConsoleError(`${errs.join(", ")} 값이 일치하지 않습니다.`);else{setConsoleError("");setConsoleOpen(true)}};
   const pickFragment=(time:string)=>{const next=[...fragments,time];setFragments(next);setRecoveryError(false);if(next.length===4){if(next.join(",")==="22:40,22:53,23:07,23:18"){setRestored(true)}else{setFragments([]);setRecoveryError(true)}}};
   const toggleBreaker=(i:number)=>setBreakers(b=>b.map((v,n)=>n===i?!v:v));
   const testBreakers=()=>{if(breakers.join(",")==="true,false,true,true"){setBreakerSolved(true);setPowerSeen(true)}else setConsoleError("배전 순서가 맞지 않아 회로가 초기화되었습니다.")};
