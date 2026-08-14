@@ -1,2 +1,48 @@
 @media (max-width:950px) and (orientation:portrait){body{background:#020604}body>*{visibility:hidden}body:before{content:"↻\A기기를 가로로 돌려주세요\A\A지하 3층은 가로 화면에서 플레이할 수 있습니다.";white-space:pre;visibility:visible;position:fixed;z-index:9999;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:#8dff9b;background:radial-gradient(circle,#082510,#010302 68%);font:16px/1.8 "Courier New","Malgun Gothic",monospace;letter-spacing:1px;text-shadow:0 0 9px #18a72c}}
 @media (max-width:950px) and (orientation:landscape){html,body{overflow:hidden;touch-action:manipulation}.act-screen{min-width:0;min-height:0;width:100vw;height:100dvh}.act-screen>header{height:28px;font-size:11px}.act-banner{top:34px;left:112px}.desktop-files{left:8px;top:33px;width:96px;gap:2px;height:calc(100dvh - 70px);display:grid;grid-template-columns:1fr 1fr;align-content:start}.desktop-files button{font-size:10px;padding:1px}.desktop-files span{font-size:24px}.desktop-files small{font-size:8px}.case-panel{right:6px;top:35px;width:175px;padding:7px;font-size:10px}.case-panel h3{margin-bottom:3px}.case-panel>div{padding:4px 2px;min-height:24px}.case-panel>div b{width:37px}.case-panel hr{margin:4px 0}.case-panel p{margin:3px 0}.puzzle-window{top:50%;left:48%;width:min(590px,73vw);min-height:300px;max-height:calc(100dvh - 44px)}.retro-title{height:25px}.puzzle-body{padding:13px 20px;min-height:270px;max-height:calc(100dvh - 70px);overflow:auto}.puzzle-body pre{margin:8px 0;padding:10px;font-size:12px;line-height:1.4}.puzzle-body h3{font-size:13px;margin:9px 0}.puzzle-body form{margin-top:10px}.puzzle-body input{padding:9px;font-size:16px}.puzzle-body button,.act-choice button{min-height:38px}.success-box{margin-top:12px;padding:12px}.act-choice h2{font-size:13px;margin:5px}.act-choice button{margin:5px 0;padding:6px 10px}.act-screen>footer{height:30px}.act-screen>footer button{height:23px}.act-screen>footer span,.act-screen>footer time{padding:3px}.act-title-card h1{font-size:34px}.intro-action{bottom:5%;left:auto;right:5%;transform:scale(.8);transform-origin:right bottom}.recap-screen article{width:82vw;max-height:90dvh;overflow:auto;padding:18px 28px}.recap-screen h1{font-size:28px;margin:5px 0}.recap-screen h2{margin-bottom:8px}.recap-screen p{font-size:12px;line-height:1.5}.recap-choice{margin:10px 0;padding:8px}.final-ending article{right:3%;top:6%;width:58%;padding:18px;max-height:88dvh;overflow:auto}.final-ending article h1{font-size:27px;margin:7px 0}.final-ending article p{font-size:12px;line-height:1.5}.ending-elevator{left:4%;top:17%;height:68%}.choice-trace{margin:9px 0;padding:7px}}
+
+/* Mobile and tablet landscape: keep every interactive surface inside the viewport. */
+@media (orientation:landscape) and (max-width:1400px), (orientation:landscape) and (max-height:820px){
+ html,body{width:100%;height:100%;overflow:hidden;overscroll-behavior:none;touch-action:manipulation}
+ body{min-width:0;min-height:0}
+ .intro,.boot,.prologue,.mystery-desktop,.act-screen,.recap-screen,.hard-ending,.final-ending,.cinematic{width:100%;height:100dvh;min-width:0;min-height:0;overflow:hidden}
+ .intro-action{left:auto;right:max(4%,env(safe-area-inset-right));bottom:max(4%,env(safe-area-inset-bottom));max-width:min(48vw,420px);transform:none}
+ .intro-action p,.intro-action small{max-width:100%;white-space:normal}
+ .intro-action button{min-width:0;width:100%;padding:clamp(8px,2vh,14px) clamp(14px,3vw,30px);font-size:clamp(14px,2.6vw,19px)}
+ .boot{padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+ .boot-logo{font-size:clamp(34px,8vh,58px)}
+ .bootbar{width:min(330px,78vw)}
+ .prologue{padding:max(6px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}
+ .prologue article{width:min(900px,94vw);max-height:calc(100dvh - 12px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(12px,3vh,30px) clamp(18px,4vw,42px)}
+ .prologue h1{font-size:clamp(22px,5vh,34px);margin:5px 0 8px}.prologue p{font-size:clamp(11px,1.8vh,15px);line-height:1.55}.prologue blockquote{margin:9px 0;padding:8px;line-height:1.5}
+ .mystery-desktop>header,.act-screen>header{padding-left:max(8px,env(safe-area-inset-left));padding-right:max(8px,env(safe-area-inset-right))}
+ .mystery-icons{left:max(5px,env(safe-area-inset-left));top:31px;width:clamp(84px,12vw,112px);max-height:calc(100dvh - 64px);overflow-y:auto;gap:2px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start}
+ .mystery-icons button{min-width:0;padding:2px;font-size:clamp(8px,1.4vw,10px);overflow-wrap:anywhere}.mystery-icons i{font-size:clamp(18px,3.2vw,27px)}
+ .case-note{right:max(5px,env(safe-area-inset-right));top:31px;width:clamp(145px,20vw,205px);max-height:calc(100dvh - 65px);overflow-y:auto;padding:clamp(5px,1vw,9px);font-size:clamp(8px,1.3vw,11px)}
+ .case-note h3{margin:0 0 3px}.case-note p{padding:clamp(3px,.8vh,6px) 1px}.case-note button{min-height:28px}
+ .mystery-window{left:50%;top:calc(50% - 1px);width:min(72vw,760px);height:min(480px,calc(100dvh - 38px));max-height:calc(100dvh - 38px);transform:translate(-50%,-50%)}
+ .window-head{height:27px;padding-top:2px}.window-content{height:calc(100% - 27px);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(7px,1.8vw,16px)}
+ .file-puzzle{grid-template-columns:minmax(120px,28%) minmax(0,1fr);gap:8px}.file-puzzle article{min-width:0;min-height:0;padding:10px;overflow-wrap:anywhere}.file-puzzle .stamp,.file-puzzle>.evidence{grid-column:1/3}
+ .dark-photo{width:min(410px,82%);height:min(250px,46dvh)}.generated-film{height:min(180px,42dvh)}
+ .dial-puzzle>div,.power-puzzle>div,.glyph-puzzle>div{max-width:100%;margin:8px;gap:clamp(5px,1.5vw,14px);flex-wrap:wrap}.dial-puzzle>div button{width:clamp(82px,16vw,130px);padding:7px}.dial-puzzle i{font-size:clamp(22px,5vh,35px);margin:7px}
+ .power-puzzle>div button{width:clamp(52px,9vw,75px);padding:7px}.wave{padding:7px;font-size:clamp(17px,4vw,30px);letter-spacing:clamp(2px,.7vw,6px);overflow:hidden}
+ .memory-puzzle{gap:5px}.memory-puzzle>button{padding:clamp(6px,1.5vh,10px);gap:10px}.witness-puzzle>button{padding:8px;margin:5px 0}
+ .glyph-rack{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px!important;margin:5px 0!important}.glyph-slot{min-width:0;min-height:82px}.glyph-bank{flex-wrap:wrap}.glyph-bank button{width:clamp(72px,12vw,100px)}
+ .core-console{min-height:100%;padding:clamp(6px,1.5vw,14px);overflow-wrap:anywhere}.core-console pre{min-height:0;margin:3px;padding:7px;line-height:1.35}.console-fields{width:min(390px,100%)}.console-fields label{grid-template-columns:minmax(72px,28%) minmax(0,1fr);margin:3px 0}.core-console input{max-width:100%}
+ .recap-screen article{width:min(760px,90vw);max-height:90dvh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(14px,3vh,28px) clamp(20px,4vw,40px)}
+ .hard-ending article,.final-ending article{top:3%;right:max(2%,env(safe-area-inset-right));width:min(64%,820px);height:94dvh;max-height:94dvh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:clamp(12px,2.5vh,28px) clamp(16px,3vw,36px)}
+ .hard-ending article h1,.final-ending article h1{font-size:clamp(22px,5vh,36px);margin:5px 0}.hard-ending article p,.final-ending article p{font-size:clamp(11px,1.8vh,15px);line-height:1.5}.hard-ending article blockquote{font-size:inherit;margin:8px 0;padding:8px}
+ .ending-door,.ending-elevator{left:max(3%,env(safe-area-inset-left));top:20%;width:28%;height:64%}
+ button,input,[role="button"]{max-width:100%;min-height:32px}
+}
+
+/* Extra-short phones (foldables and browser chrome reducing landscape height). */
+@media (orientation:landscape) and (max-height:520px){
+ .mystery-desktop>header,.act-screen>header{height:25px;font-size:9px}.mystery-icons{top:27px;max-height:calc(100dvh - 56px)}.case-note{top:27px;max-height:calc(100dvh - 58px)}
+ .mystery-window{width:min(74vw,760px);height:calc(100dvh - 31px);max-height:calc(100dvh - 31px)}.window-content{padding:6px;font-size:11px}
+ .mystery-desktop>footer,.act-screen>footer{height:27px;font-size:9px}.mystery-desktop>footer button,.act-screen>footer button{height:22px;min-height:22px}
+ .prologue article{max-height:96dvh;padding:10px 18px}.prologue p{font-size:10px;line-height:1.4}.prologue blockquote{font-size:10px}
+ .act-title-card.detailed>div{width:88vw;max-height:94dvh;overflow-y:auto}.act-title-card.detailed h1{font-size:24px;margin:4px}.act-story{margin-top:5px;padding-top:5px}.act-story p{font-size:9px;line-height:1.3}
+ .dark-photo{height:34dvh}.generated-film{height:32dvh}.evidence-image{max-height:34dvh}
+ .hard-ending article,.final-ending article{height:96dvh;max-height:96dvh;padding:9px 16px}.hard-ending article p,.final-ending article p{font-size:10px;line-height:1.4}
+}
